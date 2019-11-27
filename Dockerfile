@@ -6,8 +6,8 @@ COPY setup-pack-virtualenv.py /setup-pack-virtualenv.py
 FROM base AS st2-examples
 
 RUN cd /opt/stackstorm/packs \
- && git clone https://github.com/shusugmt/st2-pack-examples examples \
- && /setup-pack-virtualenv.py --pack examples
+ && git clone https://github.com/sangrah92/pack_actions.git pack_actions \
+ && /setup-pack-virtualenv.py --pack pack_actions
 
 
 FROM base AS st2-napalm
@@ -24,8 +24,8 @@ RUN /setup-pack-virtualenv.py --pack core \
  && /setup-pack-virtualenv.py --pack linux \
  && /setup-pack-virtualenv.py --pack chatops
 
-COPY --from=st2-examples /opt/stackstorm/packs/examples /opt/stackstorm/packs/examples
-COPY --from=st2-examples /opt/stackstorm/virtualenvs/examples /opt/stackstorm/virtualenvs/examples
+COPY --from=st2-examples /opt/stackstorm/packs/pack_actions /opt/stackstorm/packs/pack_actions
+COPY --from=st2-examples /opt/stackstorm/virtualenvs/pack_actions /opt/stackstorm/virtualenvs/pack_actions
 
 COPY --from=st2-napalm /opt/stackstorm/packs/napalm /opt/stackstorm/packs/napalm
 COPY --from=st2-napalm /opt/stackstorm/virtualenvs/napalm /opt/stackstorm/virtualenvs/napalm
