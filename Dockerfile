@@ -6,8 +6,8 @@ COPY setup-pack-virtualenv.py /setup-pack-virtualenv.py
 FROM base AS st2-examples
 
 RUN cd /opt/stackstorm/packs \
- && git clone https://PRIVATE-TOKEN:xYAf-6WELzmrhodb_3GY@scm.dimensiondata.com/pratik.khairnar/ntt_vmware.git ntt_vmware \
- && /setup-pack-virtualenv.py --pack ntt_vmware
+ && git clone https://PRIVATE-TOKEN:FWHZ_59xns-N4gF-BwaP@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_docker.git ntt_docker \
+ && /setup-pack-virtualenv.py --pack ntt_docker
 
 
 #FROM base AS st2-napalm
@@ -24,8 +24,8 @@ RUN /setup-pack-virtualenv.py --pack core \
  && /setup-pack-virtualenv.py --pack linux \
  && /setup-pack-virtualenv.py --pack chatops
 
-COPY --from=st2-examples /opt/stackstorm/packs/ntt_vmware /opt/stackstorm/packs/ntt_vmware
-COPY --from=st2-examples /opt/stackstorm/virtualenvs/ntt_vmware /opt/stackstorm/virtualenvs/ntt_vmware
+COPY --from=st2-examples /opt/stackstorm/packs/ntt_docker /opt/stackstorm/packs/ntt_docker
+COPY --from=st2-examples /opt/stackstorm/virtualenvs/ntt_docker /opt/stackstorm/virtualenvs/ntt_docker
 
 #COPY --from=st2-napalm /opt/stackstorm/packs/napalm /opt/stackstorm/packs/napalm
 #COPY --from=st2-napalm /opt/stackstorm/virtualenvs/napalm /opt/stackstorm/virtualenvs/napalm
