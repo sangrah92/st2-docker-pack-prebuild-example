@@ -6,79 +6,79 @@ COPY setup-pack-virtualenv.py /setup-pack-virtualenv.py
 FROM base AS st2-examples
 
 RUN cd /opt/stackstorm/packs \
- && git clone https://PRIVATE-TOKEN:FWHZ_59xns-N4gF-BwaP@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_network_patch.git ntt_network_patch \
+ && git clone https://PRIVATE-TOKEN:aEJFW8JRRZuaPt66ZYrt@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_network_patch.git ntt_network_patch \
  && /setup-pack-virtualenv.py --pack ntt_network_patch
  
 RUN cd /opt/stackstorm/packs \
- && git clone https://PRIVATE-TOKEN:FWHZ_59xns-N4gF-BwaP@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_vmware.git ntt_vmware \
+ && git clone https://PRIVATE-TOKEN:aEJFW8JRRZuaPt66ZYrt@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_vmware.git ntt_vmware \
  && /setup-pack-virtualenv.py --pack ntt_vmware
  
 RUN cd /opt/stackstorm/packs \
- && git clone https://PRIVATE-TOKEN:FWHZ_59xns-N4gF-BwaP@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_o365.git ntt_o365 \
+ && git clone https://PRIVATE-TOKEN:aEJFW8JRRZuaPt66ZYrt@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_o365.git ntt_o365 \
  && /setup-pack-virtualenv.py --pack ntt_o365
  
 RUN cd /opt/stackstorm/packs \
- && git clone https://PRIVATE-TOKEN:FWHZ_59xns-N4gF-BwaP@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_checkpoint.git ntt_checkpoint \
+ && git clone https://PRIVATE-TOKEN:aEJFW8JRRZuaPt66ZYrt@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_checkpoint.git ntt_checkpoint \
  && /setup-pack-virtualenv.py --pack ntt_checkpoint
 
 RUN cd /opt/stackstorm/packs \
- && git clone https://PRIVATE-TOKEN:FWHZ_59xns-N4gF-BwaP@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_ods.git ntt_ods \
+ && git clone https://PRIVATE-TOKEN:aEJFW8JRRZuaPt66ZYrt@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_ods.git ntt_ods \
  && /setup-pack-virtualenv.py --pack ntt_ods
  
 RUN cd /opt/stackstorm/packs \
- && git clone https://PRIVATE-TOKEN:FWHZ_59xns-N4gF-BwaP@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_utils_json.git ntt_utils_json \
+ && git clone https://PRIVATE-TOKEN:aEJFW8JRRZuaPt66ZYrt@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_utils_json.git ntt_utils_json \
  && /setup-pack-virtualenv.py --pack ntt_utils_json
  
 RUN cd /opt/stackstorm/packs \
- && git clone https://PRIVATE-TOKEN:FWHZ_59xns-N4gF-BwaP@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_database_oracle.git ntt_database_oracle \
+ && git clone https://PRIVATE-TOKEN:aEJFW8JRRZuaPt66ZYrt@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_database_oracle.git ntt_database_oracle \
  && /setup-pack-virtualenv.py --pack ntt_database_oracle
  
 RUN cd /opt/stackstorm/packs \
- && git clone https://PRIVATE-TOKEN:FWHZ_59xns-N4gF-BwaP@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_windows.git ntt_windows \
+ && git clone https://PRIVATE-TOKEN:aEJFW8JRRZuaPt66ZYrt@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_windows.git ntt_windows \
  && /setup-pack-virtualenv.py --pack ntt_windows
  
 RUN cd /opt/stackstorm/packs \
- && git clone https://PRIVATE-TOKEN:FWHZ_59xns-N4gF-BwaP@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_voice_cisco.git ntt_voice_cisco \
+ && git clone https://PRIVATE-TOKEN:aEJFW8JRRZuaPt66ZYrt@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_voice_cisco.git ntt_voice_cisco \
  && /setup-pack-virtualenv.py --pack ntt_voice_cisco
  
 RUN cd /opt/stackstorm/packs \
- && git clone https://PRIVATE-TOKEN:FWHZ_59xns-N4gF-BwaP@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_vnext_sample_pack.git ntt_vnext_sample_pack \
+ && git clone https://PRIVATE-TOKEN:aEJFW8JRRZuaPt66ZYrt@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_vnext_sample_pack.git ntt_vnext_sample_pack \
  && /setup-pack-virtualenv.py --pack ntt_vnext_sample_pack
  
 RUN cd /opt/stackstorm/packs \
- && git clone https://PRIVATE-TOKEN:FWHZ_59xns-N4gF-BwaP@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_unix.git ntt_unix \
+ && git clone https://PRIVATE-TOKEN:aEJFW8JRRZuaPt66ZYrt@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_unix.git ntt_unix \
  && /setup-pack-virtualenv.py --pack ntt_unix
  
 RUN cd /opt/stackstorm/packs \
- && git clone https://PRIVATE-TOKEN:FWHZ_59xns-N4gF-BwaP@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_storage.git ntt_storage \
+ && git clone https://PRIVATE-TOKEN:aEJFW8JRRZuaPt66ZYrt@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_storage.git ntt_storage \
  && /setup-pack-virtualenv.py --pack ntt_storage
  
 RUN cd /opt/stackstorm/packs \
- && git clone https://PRIVATE-TOKEN:FWHZ_59xns-N4gF-BwaP@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_pfizer.git ntt_pfizer \
+ && git clone https://PRIVATE-TOKEN:aEJFW8JRRZuaPt66ZYrt@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_pfizer.git ntt_pfizer \
  && /setup-pack-virtualenv.py --pack ntt_pfizer
  
 RUN cd /opt/stackstorm/packs \
- && git clone https://PRIVATE-TOKEN:FWHZ_59xns-N4gF-BwaP@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_network_cisco.git ntt_network_cisco \
+ && git clone https://PRIVATE-TOKEN:aEJFW8JRRZuaPt66ZYrt@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_network_cisco.git ntt_network_cisco \
  && /setup-pack-virtualenv.py --pack ntt_network_cisco
  
 RUN cd /opt/stackstorm/packs \
- && git clone https://PRIVATE-TOKEN:FWHZ_59xns-N4gF-BwaP@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_network.git ntt_network \
+ && git clone https://PRIVATE-TOKEN:aEJFW8JRRZuaPt66ZYrt@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_network.git ntt_network \
  && /setup-pack-virtualenv.py --pack ntt_network 
  
 RUN cd /opt/stackstorm/packs \
- && git clone https://PRIVATE-TOKEN:FWHZ_59xns-N4gF-BwaP@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_msdc.git ntt_msdc \
+ && git clone https://PRIVATE-TOKEN:aEJFW8JRRZuaPt66ZYrt@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_msdc.git ntt_msdc \
  && /setup-pack-virtualenv.py --pack ntt_msdc
  
 RUN cd /opt/stackstorm/packs \
- && git clone https://PRIVATE-TOKEN:FWHZ_59xns-N4gF-BwaP@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_ivr.git ntt_ivr \
+ && git clone https://PRIVATE-TOKEN:aEJFW8JRRZuaPt66ZYrt@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_ivr.git ntt_ivr \
  && /setup-pack-virtualenv.py --pack ntt_ivr
  
 RUN cd /opt/stackstorm/packs \
- && git clone https://PRIVATE-TOKEN:FWHZ_59xns-N4gF-BwaP@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_itsm.git ntt_itsm \
+ && git clone https://PRIVATE-TOKEN:aEJFW8JRRZuaPt66ZYrt@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_itsm.git ntt_itsm \
  && /setup-pack-virtualenv.py --pack ntt_itsm
  
 RUN cd /opt/stackstorm/packs \
- && git clone https://PRIVATE-TOKEN:FWHZ_59xns-N4gF-BwaP@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_insite_msen.git ntt_insite_msen \
+ && git clone https://PRIVATE-TOKEN:aEJFW8JRRZuaPt66ZYrtscm.dimensiondata.com/vnext/StackStorm-Packs/ntt_insite_msen.git ntt_insite_msen \
  && /setup-pack-virtualenv.py --pack ntt_insite_msen
  
  
