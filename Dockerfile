@@ -6,27 +6,27 @@ COPY setup-pack-virtualenv.py /setup-pack-virtualenv.py
 FROM base AS st2-examples
 
 RUN cd /opt/stackstorm/packs \
- && git clone https://PRIVATE-TOKEN:aEJFW8JRRZuaPt66ZYrt@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_o365.git ntt_o365 \
+ && git clone https://PRIVATE-TOKEN:PJRdDTTWs7hA_pW8CUC9@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_o365.git ntt_o365 \
  && /setup-pack-virtualenv.py --pack ntt_o365
  
 RUN cd /opt/stackstorm/packs \
- && git clone https://PRIVATE-TOKEN:aEJFW8JRRZuaPt66ZYrt@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_checkpoint.git ntt_checkpoint \
+ && git clone https://PRIVATE-TOKEN:PJRdDTTWs7hA_pW8CUC9@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_checkpoint.git ntt_checkpoint \
  && /setup-pack-virtualenv.py --pack ntt_checkpoint 
  
 RUN cd /opt/stackstorm/packs \
- && git clone https://PRIVATE-TOKEN:aEJFW8JRRZuaPt66ZYrt@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_ods.git ntt_ods \
+ && git clone https://PRIVATE-TOKEN:PJRdDTTWs7hA_pW8CUC9@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_ods.git ntt_ods \
  && /setup-pack-virtualenv.py --pack ntt_ods 
  
 RUN cd /opt/stackstorm/packs \
- && git clone https://PRIVATE-TOKEN:aEJFW8JRRZuaPt66ZYrt@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_utils_json.git ntt_utils_json \
+ && git clone https://PRIVATE-TOKEN:PJRdDTTWs7hA_pW8CUC9@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_utils_json.git ntt_utils_json \
  && /setup-pack-virtualenv.py --pack ntt_utils_json 
  
 RUN cd /opt/stackstorm/packs \
- && git clone https://PRIVATE-TOKEN:aEJFW8JRRZuaPt66ZYrt@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_database_oracle.git ntt_database_oracle \
+ && git clone https://PRIVATE-TOKEN:PJRdDTTWs7hA_pW8CUC9@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_database_oracle.git ntt_database_oracle \
  && /setup-pack-virtualenv.py --pack ntt_database_oracle 
  
 RUN cd /opt/stackstorm/packs \
- && git clone https://PRIVATE-TOKEN:aEJFW8JRRZuaPt66ZYrt@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_windows.git ntt_windows \
+ && git clone https://PRIVATE-TOKEN:PJRdDTTWs7hA_pW8CUC9@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_windows.git ntt_windows \
  && /setup-pack-virtualenv.py --pack ntt_windows  
  
  
