@@ -10,8 +10,8 @@ RUN cd /opt/stackstorm/packs \
  && /setup-pack-virtualenv.py --pack ntt_ivr 
  
 RUN cd /opt/stackstorm/packs \
- && git clone https://PRIVATE-TOKEN:PJRdDTTWs7hA_pW8CUC9@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_itsm.git ntt_itsm \
- && /setup-pack-virtualenv.py --pack ntt_itsm 
+ && git clone https://PRIVATE-TOKEN:PJRdDTTWs7hA_pW8CUC9@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_emr.git ntt_emr \
+ && /setup-pack-virtualenv.py --pack ntt_emr 
  
 RUN cd /opt/stackstorm/packs \
  && git clone https://PRIVATE-TOKEN:PJRdDTTWs7hA_pW8CUC9@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_insite_msen.git ntt_insite_msen \
@@ -37,8 +37,8 @@ RUN /setup-pack-virtualenv.py --pack core \
 COPY --from=st2-examples /opt/stackstorm/packs/ntt_ivr /opt/stackstorm/packs/ntt_ivr
 COPY --from=st2-examples /opt/stackstorm/virtualenvs/ntt_ivr /opt/stackstorm/virtualenvs/ntt_ivr
 
-COPY --from=st2-examples /opt/stackstorm/packs/ntt_itsm /opt/stackstorm/packs/ntt_itsm
-COPY --from=st2-examples /opt/stackstorm/virtualenvs/ntt_itsm /opt/stackstorm/virtualenvs/ntt_itsm
+COPY --from=st2-examples /opt/stackstorm/packs/ntt_emr /opt/stackstorm/packs/ntt_emr
+COPY --from=st2-examples /opt/stackstorm/virtualenvs/ntt_emr /opt/stackstorm/virtualenvs/ntt_emr
 
 COPY --from=st2-examples /opt/stackstorm/packs/ntt_insite_msen /opt/stackstorm/packs/ntt_insite_msen
 COPY --from=st2-examples /opt/stackstorm/virtualenvs/ntt_insite_msen /opt/stackstorm/virtualenvs/ntt_insite_msen
