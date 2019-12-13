@@ -6,16 +6,16 @@ COPY setup-pack-virtualenv.py /setup-pack-virtualenv.py
 FROM base AS st2-examples
  
 RUN cd /opt/stackstorm/packs \
- && git clone https://PRIVATE-TOKEN:PJRdDTTWs7hA_pW8CUC9@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_voice_cisco.git ntt_voice_cisco \
- && /setup-pack-virtualenv.py --pack ntt_voice_cisco 
+ && git clone https://PRIVATE-TOKEN:PJRdDTTWs7hA_pW8CUC9@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_storage.git ntt_storage \
+ && /setup-pack-virtualenv.py --pack ntt_storage 
  
 RUN cd /opt/stackstorm/packs \
- && git clone https://PRIVATE-TOKEN:PJRdDTTWs7hA_pW8CUC9@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_vnext_sample_pack.git ntt_vnext_sample_pack \
- && /setup-pack-virtualenv.py --pack ntt_vnext_sample_pack 
+ && git clone https://PRIVATE-TOKEN:PJRdDTTWs7hA_pW8CUC9@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_pfizer.git ntt_pfizer \
+ && /setup-pack-virtualenv.py --pack ntt_pfizer 
  
 RUN cd /opt/stackstorm/packs \
- && git clone https://PRIVATE-TOKEN:PJRdDTTWs7hA_pW8CUC9@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_unix.git ntt_unix \
- && /setup-pack-virtualenv.py --pack ntt_unix
+ && git clone https://PRIVATE-TOKEN:PJRdDTTWs7hA_pW8CUC9@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_msdc.git ntt_msdc \
+ && /setup-pack-virtualenv.py --pack ntt_msdc
 
  
  
@@ -34,14 +34,14 @@ RUN /setup-pack-virtualenv.py --pack core \
  && /setup-pack-virtualenv.py --pack chatops
 
 
-COPY --from=st2-examples /opt/stackstorm/packs/ntt_voice_cisco /opt/stackstorm/packs/ntt_voice_cisco
-COPY --from=st2-examples /opt/stackstorm/virtualenvs/ntt_voice_cisco /opt/stackstorm/virtualenvs/ntt_voice_cisco
+COPY --from=st2-examples /opt/stackstorm/packs/ntt_storage /opt/stackstorm/packs/ntt_storage
+COPY --from=st2-examples /opt/stackstorm/virtualenvs/ntt_storage /opt/stackstorm/virtualenvs/ntt_storage
 
-COPY --from=st2-examples /opt/stackstorm/packs/ntt_vnext_sample_pack /opt/stackstorm/packs/ntt_vnext_sample_pack
-COPY --from=st2-examples /opt/stackstorm/virtualenvs/ntt_vnext_sample_pack /opt/stackstorm/virtualenvs/ntt_vnext_sample_pack
+COPY --from=st2-examples /opt/stackstorm/packs/ntt_pfizer /opt/stackstorm/packs/ntt_pfizer
+COPY --from=st2-examples /opt/stackstorm/virtualenvs/ntt_pfizer /opt/stackstorm/virtualenvs/ntt_pfizer
 
-COPY --from=st2-examples /opt/stackstorm/packs/ntt_unix /opt/stackstorm/packs/ntt_unix
-COPY --from=st2-examples /opt/stackstorm/virtualenvs/ntt_unix /opt/stackstorm/virtualenvs/ntt_unix
+COPY --from=st2-examples /opt/stackstorm/packs/ntt_msdc /opt/stackstorm/packs/ntt_msdc
+COPY --from=st2-examples /opt/stackstorm/virtualenvs/ntt_msdc /opt/stackstorm/virtualenvs/ntt_msdc
 
 
 #COPY --from=st2-napalm /opt/stackstorm/packs/napalm /opt/stackstorm/packs/napalm
