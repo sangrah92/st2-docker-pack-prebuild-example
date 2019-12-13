@@ -6,16 +6,16 @@ COPY setup-pack-virtualenv.py /setup-pack-virtualenv.py
 FROM base AS st2-examples
  
 RUN cd /opt/stackstorm/packs \
- && git clone https://PRIVATE-TOKEN:PJRdDTTWs7hA_pW8CUC9@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_storage.git ntt_storage \
- && /setup-pack-virtualenv.py --pack ntt_storage 
+ && git clone https://PRIVATE-TOKEN:PJRdDTTWs7hA_pW8CUC9@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_ivr.git ntt_ivr \
+ && /setup-pack-virtualenv.py --pack ntt_ivr 
  
 RUN cd /opt/stackstorm/packs \
- && git clone https://PRIVATE-TOKEN:PJRdDTTWs7hA_pW8CUC9@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_pfizer.git ntt_pfizer \
- && /setup-pack-virtualenv.py --pack ntt_pfizer 
+ && git clone https://PRIVATE-TOKEN:PJRdDTTWs7hA_pW8CUC9@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_itsm.git ntt_itsm \
+ && /setup-pack-virtualenv.py --pack ntt_itsm 
  
 RUN cd /opt/stackstorm/packs \
- && git clone https://PRIVATE-TOKEN:PJRdDTTWs7hA_pW8CUC9@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_msdc.git ntt_msdc \
- && /setup-pack-virtualenv.py --pack ntt_msdc
+ && git clone https://PRIVATE-TOKEN:PJRdDTTWs7hA_pW8CUC9@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_insite_msen.git ntt_insite_msen \
+ && /setup-pack-virtualenv.py --pack ntt_insite_msen
 
  
  
@@ -34,14 +34,14 @@ RUN /setup-pack-virtualenv.py --pack core \
  && /setup-pack-virtualenv.py --pack chatops
 
 
-COPY --from=st2-examples /opt/stackstorm/packs/ntt_storage /opt/stackstorm/packs/ntt_storage
-COPY --from=st2-examples /opt/stackstorm/virtualenvs/ntt_storage /opt/stackstorm/virtualenvs/ntt_storage
+COPY --from=st2-examples /opt/stackstorm/packs/ntt_ivr /opt/stackstorm/packs/ntt_ivr
+COPY --from=st2-examples /opt/stackstorm/virtualenvs/ntt_ivr /opt/stackstorm/virtualenvs/ntt_ivr
 
-COPY --from=st2-examples /opt/stackstorm/packs/ntt_pfizer /opt/stackstorm/packs/ntt_pfizer
-COPY --from=st2-examples /opt/stackstorm/virtualenvs/ntt_pfizer /opt/stackstorm/virtualenvs/ntt_pfizer
+COPY --from=st2-examples /opt/stackstorm/packs/ntt_itsm /opt/stackstorm/packs/ntt_itsm
+COPY --from=st2-examples /opt/stackstorm/virtualenvs/ntt_itsm /opt/stackstorm/virtualenvs/ntt_itsm
 
-COPY --from=st2-examples /opt/stackstorm/packs/ntt_msdc /opt/stackstorm/packs/ntt_msdc
-COPY --from=st2-examples /opt/stackstorm/virtualenvs/ntt_msdc /opt/stackstorm/virtualenvs/ntt_msdc
+COPY --from=st2-examples /opt/stackstorm/packs/ntt_insite_msen /opt/stackstorm/packs/ntt_insite_msen
+COPY --from=st2-examples /opt/stackstorm/virtualenvs/ntt_insite_msen /opt/stackstorm/virtualenvs/ntt_insite_msen
 
 
 #COPY --from=st2-napalm /opt/stackstorm/packs/napalm /opt/stackstorm/packs/napalm
