@@ -4,10 +4,6 @@ COPY setup-pack-virtualenv.py /setup-pack-virtualenv.py
 
 
 FROM base AS st2-examples
-
-RUN cd /opt/stackstorm/packs \
- && git clone https://PRIVATE-TOKEN:PJRdDTTWs7hA_pW8CUC9@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_ods.git ntt_ods \
- && /setup-pack-virtualenv.py --pack ntt_ods 
  
 RUN cd /opt/stackstorm/packs \
  && git clone https://PRIVATE-TOKEN:PJRdDTTWs7hA_pW8CUC9@scm.dimensiondata.com/vnext/StackStorm-Packs/ntt_utils_json.git ntt_utils_json \
@@ -37,8 +33,6 @@ RUN /setup-pack-virtualenv.py --pack core \
  && /setup-pack-virtualenv.py --pack linux \
  && /setup-pack-virtualenv.py --pack chatops
 
-COPY --from=st2-examples /opt/stackstorm/packs/ntt_ods /opt/stackstorm/packs/ntt_ods
-COPY --from=st2-examples /opt/stackstorm/virtualenvs/ntt_ods /opt/stackstorm/virtualenvs/ntt_ods
 
 COPY --from=st2-examples /opt/stackstorm/packs/ntt_utils_json /opt/stackstorm/packs/ntt_utils_json
 COPY --from=st2-examples /opt/stackstorm/virtualenvs/ntt_utils_json /opt/stackstorm/virtualenvs/ntt_utils_json
